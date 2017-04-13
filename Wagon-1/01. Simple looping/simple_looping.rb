@@ -2,6 +2,12 @@
 
 def sum(min,max)
   # your code here
+  result = 0
+  for i in (min..max)
+  	result += i
+  end
+  puts result
+  return result
 end
 
 # Testing your code
