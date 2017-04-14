@@ -15,6 +15,9 @@ puts inject(1..100, 0) { |initial_value, element| element + initial_value } == 5
 
 def timer_for
   # your code goes here
+  start = Time.now
+  yield
+  p Time.now - start
 end
 
 timer_for do 
