@@ -1,7 +1,12 @@
 # Recoding inject iterator
 
 def inject(array, initial_value)
-  # your code goes here
+	# your code goes here
+	array.each do |i|
+		initial_value = yield(i, initial_value)
+		# p initial_value
+	end
+	return initial_value
 end
 
 puts inject(1..100, 0) { |initial_value, element| element + initial_value } == 5050 # true
